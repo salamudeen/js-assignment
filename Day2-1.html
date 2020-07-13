@@ -1,0 +1,45 @@
+<html>
+    <head> <h2> Display Current Day and Time </h2> </head>
+    <body>
+        <p id='first'>  </p>
+        <p id='second'> </p>
+        <script>
+            var dt = new Date();
+            var day = dt.getDay();
+            var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];           
+            document.getElementById('first').innerHTML="Today is: "+daylist[day]+".";           
+            var hour = dt.getHours();
+            var minute = dt.getMinutes();
+            var second = dt.getSeconds();
+            var prepand = (hour >= 12)? " PM ":" AM ";
+            hour = (hour >= 12)? hour - 12: hour;
+            if (hour===0 && prepand===' PM ') 
+            { 
+            if (minute===0 && second===0)
+            { 
+            hour=12;
+            prepand=' Noon';
+            } 
+            else
+            { 
+                hour=12;
+                prepand=' PM';
+            } 
+            } 
+            if (hour===0 && prepand===' AM ') 
+            { 
+            if (minute===0 && second===0)
+            { 
+            hour=12;
+            prepand=' Midnight';
+            } 
+            else
+            { 
+            hour=12;
+             prepand=' AM';
+            } 
+            } 
+            document.getElementById('second').innerHTML="Current Time : "+hour + prepand + " : " + minute + " : " + second;           
+        </script>    
+    </body>
+</html>
