@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Various methods of Array and String</title>
+</head>
+<body>
+    <script>        
+
+        // Methods of String:
+        // charCodeAt (): Returns the Unicode of the character at the specified index.
+        // Syntax: string.charCodeAt(index)
+        
+        let str='Hi its me';
+        let n= str.charCodeAt(0);
+        console.log(n);
+        
+        // concat (): Joins two or more strings and returns a new joined strings.
+        // Syntax: string.concat(string1, string2,.....,string)
+        
+        let str1='Hii';
+        let str2='iam here';
+        let res = str1.concat(str2);
+        console.log(res);
+        
+        // includes() : Checks whether a string contains the specified string/characters.
+        // Syntax: string.includes(searchvalue, start)
+
+        let str3='Its rabbit.';
+        let n1=str3.includes('tour');
+        console.log(n1);
+
+        // localeCompare() : Compares two strings in the current locale.
+        // Syntax: string.localeCompare(compareString)
+
+        let str11='abc';
+        let str22='efg';
+        let n3=str11.localeCompare(str22);
+        console.log(n3);
+
+        // match(): Searches a string for a match against a regular expression, and returns the
+        // matches.
+        // Syntax: string.match(regexp)
+
+        let str='The bird flies away from home';
+        Let res = str.match(i);
+        console.log(res);
+         
+        // repeat(): returns a new string with a specified number of copies of an existing
+        // string.
+        // Syntax: string.repeat(count)
+
+        let str='Hi all';
+        str.repeat(2);
+        console.log(str);
+
+        // replace(): Searches a string for a specified value, or a regular expression, and
+        // returns a new string where the specified values are replaced.
+        // Syntax: string.replace (searchvalue, newvalue)
+
+        let str='My home';
+        let res=str.replace('home','schools');
+        console.log(res);
+
+        // slice(): Extracts a part of a string and returns a new string.
+        // Syntax: string.slice(start, end)
+
+        let str='HI all';
+        let str=str.slice(0,5);
+
+        // split(): Splits a string into an array of substrings.
+        // Syntax: string.split(separator,limit)
+
+        let str='How are you';
+        let res=str.split(' ');
+        console.log(res);
+
+        // substr(): Extracts the characters from a string, beginning at a specified start
+        // position, and through the specified number of character.
+        // Syntax: string.substr(start,length)
+
+        let str='Hii all';
+        let res=str.substr(1,4);
+
+        // trim(): Removes whitespace from both ends of a string.
+        // Syntax: string.trim()
+
+        let str=' Hi all ';
+        Alert(str.trim());
+
+        // valueOf(): Returns the primitive value of a string object.
+        // Syntax: string.valueOf()
+
+        let str='hi all';
+        let res=str.valueOf();
+
+       
+        // Methods of array:
+        // copyWithin() : Copies array elements within the array, to and from specified
+        // positions.
+        // Syntax: array.copyWithin(target, start, end)
+
+        let fruits=['apple','mango','banana','pineapple'];
+        fruits.copyWithin(2,0);
+
+        // Example: var fruits=[“ball”,”bat”,”hockey”,”tennis”];
+        // Fruits.fill(“football”);
+        // find(): Returns the value of the first element in an array that pass a test.
+        // Syntax: array.find(function(currentValue, index, arr), thisValue)
+
+        let ages=[3,10,18,20]
+        function checkAdult(age) {
+        return age>=18;
+        }
+        function myFunction() {
+        document.getElementById(“demo”).innerHTML=ages.find(checkAdult);
+        }
+
+        // join() : Joins all elements of an array into a string.
+        // Syntax: array.join(separator)
+
+        let fruits=[“abc”,”def”,”ghi”,”jkl”];
+        let energy=fruits.join();
+
+        // reduce(): Reduce the values of an array to a single value(goind left to right).
+        // Syntax: array.reduce(function(total,currentValue, currentIndex,arr), initialValue)
+
+        let numb=[175,50,125];
+        document.getElementById(“demo”).innerHTML=numb.reduce(myfunc);
+        function myFunc(total, num) {
+        return total -num;
+        }
+
+        // some() : Checks if any of the elements in an array pass a test.
+        // Syntax: array.some(function(currentValue, index, arr), thisValue)
+
+        let ages=[3,10,18,20];
+        function checkAdult(age) {
+        return age >= 18;
+        }
+        function myFunction() {
+        document.getElementById(“demo”).innerHTML=age.some(checkAdult);
+        }
+
+        // splice(): Adds or removes elements from an array.
+        // Syntax: array.splice(index, howmany, item1,...., itemx)
+
+        let fruits=['apple','orange','mango','grapes'];
+        Fruits.splice(2, 0, 'lemon','kiwi');
+
+        // valueOf(): Returns the primitive value of an array.
+        // Syntax: array.valueOf()
+
+        let fruits=['banana', 'apple', 'orange'];
+         v=fruits.valueOf();
+    </script>
+</body>
+</html>
