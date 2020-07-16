@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 Assignment 3</title>
+</head>
+<body>
+    <script>
+        var mark=prompt("Enter your mark");
+        var grade;
+        /* Using Conditional Statements 
+        if(mark>=90)
+        {
+            grade='Distinction';
+        }
+        else if(mark>=80)
+        {
+            grade='A+';
+        }
+        else if(mark>=70)
+        {
+            grade='A'            
+        }
+        else if(mark>=60)
+        {
+            grade='B+';
+        }
+        else if(mark>=50)
+        {
+            grade='B';
+        }
+        else
+        {
+            grade='C';
+        } */
+        //Using ternary operator
+        grade = mark>=90?'Distinction':
+                mark>=80?'A+':
+                mark>=70?'A':
+                mark>=60?'B+':
+                mark>=50?'B':
+                'C';
+        console.log(`Marks are ${mark} and grade is ${grade}`);
+    </script>
+</body>
+</html>
