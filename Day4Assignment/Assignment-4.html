@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 Assignment 4</title>
+</head>
+<body>
+    <script>
+        let value = prompt(`Enter two numbers with arithmetic operator Ex: 7 8 + 
+                    + for addition (or) 
+                    - for subtraction (or) 
+                    * for multiplication (or)
+                    / for division (or)
+                    % for percentage (or)
+                    ** for squareroot(for sqrt give second number as 2) `);        
+        let res = value.split(" ");
+        let num1=res[0];
+        let num2=res[1];
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+        let operator=res[2];
+        switch(operator)
+        {
+            case '+':   console.log(num1+num2);
+                        break;
+            case '-':   console.log(num1-num2);
+                        break;
+            case '*':   console.log(num1*num2);
+                        break;
+            case '/':   console.log(num1/num2);
+                        break;
+            case '**':  console.log(Math.sqrt(num1));
+                        break;
+            case '%':   let val = num1/num2 * 100;
+                        val = val.toFixed(2);
+                        console.log(`${val}%`);
+                        break;
+            default:    alert("please give the input in correct format");                    
+        }
+        
+    </script>
+</body>
+</html>
