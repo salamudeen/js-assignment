@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6 Assignment 2</title>
+    <h1 align='center'> Multiplication Table </h1>
+</head>
+<body>
+    <ul align='center' type='none' style="color:blue;font-size:40px;" id="list">
+    
+    </ul>
+    <script>
+        let n = prompt('Enter Any Number',1);
+        arr = [01,02,03,04,05,06,07,08,09,10];
+        const list = document.querySelector('#list');
+        arr.forEach(num=>
+        {            
+            list.innerHTML += `<li> ${num} x ${n} = ${n * num}</li>`;
+        })
+    </script>
+</body>
+</html>

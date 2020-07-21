@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6 Assignment 1</title>
+    <h1 id='heading' align='center'> Changing Background Color For Every 5 Seconds </h1>
+</head>
+<body>
+    <script>    
+        arr = ["aqua", "gray", "navy",
+         "silver", "maroon", "red", "purple", "fushsia", "green", "lime",
+          "olive", "yellow", "white", "blue", "teal", "black"];
+
+        let n = arr.length;
+        let i=0;
+                
+        function background()
+        {    
+            document.body.style.backgroundColor = arr[(i++)%n];            
+        }
+            
+        setInterval(background,5000);
+    </script>
+</body>
+</html>
