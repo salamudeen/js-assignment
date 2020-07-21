@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 Assignment 2</title>
+</head>
+<body>
+    <script>     
+        
+    class User 
+    {
+        constructor(name, age,email) 
+        {
+            this.name = name;
+            this.age = age;
+            this.email = email;  
+            this.course = []; 
+        }       
+
+        login()
+        {
+            console.log(`${this.name} has logged in`);
+            return this;
+        }
+
+        logout()
+        {
+            console.log(`${this.name} has logged out`);
+            return this;
+        }           
+
+    }
+
+    class Moderator extends User
+    {        
+        constructor(name,age,email)
+        {
+            super(name,age,email);
+            this.coins = 0;
+        }
+
+        addCoins()
+        {
+            this.coins++;
+            console.log(`${this.name} has ${this.coins} coins`);
+            return this;
+        }
+
+        removeCoins()
+        {
+            this.coins--;
+            console.log(`${this.name} has ${this.coins} coins`);
+            return this;
+        }       
+    }
+
+    class Admin extends Moderator    
+    {
+        constructor(name,age,email)
+        {
+            super(name,age,email);            
+        }
+
+        addCourse(user,course)
+        {
+            user.course.push(course);            
+        }
+
+        removeCourse(user,course)
+        {            
+            user.course.shift(course);            
+        }
+    }
+
+
+    let user1 = new User('Salamudeen',21,'salamudeen17@gmail.com')   
+    user1.login();
+    let mod = new Moderator('Suresh',22,'suresh@gmail.com');
+    mod.addCoins().addCoins().addCoins().removeCoins();
+    let admin = new Admin('Sanjay',21,'sanjay@gmail.com');
+    let members = [user1,mod,admin];
+    admin.addCourse(user1,'PHP');
+    admin.addCourse(user1,'HTML/CSS');
+    admin.addCourse(user1,'Python');
+    admin.removeCourse(user1,'PHP'); 
+    user1.logout();
+
+    members.forEach(element => {
+        console.log(element);
+    });          
+
+    
+ 
+     
+    </script>
+</body>
+</html>
